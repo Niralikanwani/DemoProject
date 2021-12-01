@@ -96,12 +96,6 @@ const defaultItemKey = (index: number, data: any) => index;
 
 let devWarningsDirection: WeakSet<object> | null = null;
 let devWarningsTagName: WeakSet<object> | null = null;
-if (process.env.NODE_ENV !== 'production') {
-  if (typeof window !== 'undefined' && typeof window.WeakSet !== 'undefined') {
-    devWarningsDirection = new WeakSet();
-    devWarningsTagName = new WeakSet();
-  }
-}
 
 export default function CreateListComponent({
     getItemOffset,
